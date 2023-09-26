@@ -102,3 +102,38 @@ const fruits5 = ["Banana", "Orange", "Apple", "Mango"];
 document.getElementById("demo7").innerHTML = fruits5;
 fruits5.push("kiwi");
 document.getElementById("demo8").innerHTML = fruits5;
+
+// splice (2,0)
+const fruits6 = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo9").innerHTML = fruits6;
+fruits6.splice(2, 0, "Lemon", "Kiwi");
+document.getElementById("demo10").innerHTML = fruits6;
+
+// splice (2,2)
+const fruits7 = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo11").innerHTML = "Original Array:<br> " + fruits7;
+let removed = fruits7.splice(2, 2, "Lemon", "Kiwi"); 
+document.getElementById("demo12").innerHTML = "New Array:<br>" + fruits7;
+document.getElementById("demo13").innerHTML = "Removed Items:<br> " + removed; 
+
+
+//slice
+const fruits8 = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+const cut = fruits8.slice(1);
+document.getElementById("demo14").innerHTML = fruits8 + "<br><br>" + cut;
+
+
+
+// this
+// create n object
+const person1 = {
+    firstName: "john",
+    lastName: "doe",
+    id: 5566,
+    fullName : function(){
+        return this.firstName + " " +this.lastName;
+
+    }
+};
+// Display data from the object
+document.getElementById('demo15').innerHTML=person1.fullName();
